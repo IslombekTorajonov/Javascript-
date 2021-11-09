@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+ <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<body>
+	<script src="app.js"></script>
+	<script type="text/javascript" src="vue.js"></script>
+<div id="app">
+	<div v-bind:style="{background:bg}">
+		<h4 v-bind:style="{color:color, border:'1px solid green}">
+			 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		</h4>
+	</div>
+	<div v-bind:style="status ? styles : styleX">
+		<center>
+			<input type="checkbox" v-model="status">
+		</center>
+		 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+	</div>
+	
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
