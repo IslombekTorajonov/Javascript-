@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- <center>
+    <div class="box">
+        <form action="" name="myForm">
+            <p>
+                <label for="depo">Первоначальный депозит</label>
+                <input type="number" name="cash" id="depo">
+            </p>
+            <p>
+                <label for="years">Срок вклада?</label>
+                <select name="years" id="years">
+                    <option value="1">1 year</option>
+                    <option value="2">2 years</option>
+                    <option value="3">3 years</option>
+                </select>
+            </p>
+            <p>
+                <label for="percent">Годовая процентная ставка?</label>
+                <input name="stapka" type="number">
+            </p>
+        </form>
+        <hr width="50%">
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <h5>Было: <br> <span id="bylo"></span></h5>
+                    <div class="color-red"></div>
+                </td>
+                <td>
+                    <h5>Станет: <br><span id="stanet"></span></h5>
+                    <div class="color-green"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</center> -->
+<!-- <style>
+    .color-red{
+        width: 50px;
+        height: 100px;
+        background-color: indianred;
+        transition: all 1s;
+    }
+    .color-green{
+        width: 50px;
+        height: 100px;
+        background-color: dimgrey;
+        transition: all 1s;
+    }
+</style> -->
+<script src="forms.js"></script>
+<div class="container"></div>
+<center><input type="text" onblur="getWeather()" id="city" placeholder="City name" style="width: 180px;height: 30px;border-radius: 15px"></center>
+<div class="dataList">
+    <ul>
+        <li>Country : <span id="country">Uz</span></li>
+        <li>City : <span id="c">Tashkent</span></li>
+        <li>Temperature : <span id="temp">29</span></li>
+
+    </ul>
+</div>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+</style>
+
+<!-- <button class="btn" id="triangle">Uchburchak</button>
+<button class="btn" id="rect">Tortburchak</button>
+<button class="btn" id="Circle">Aylana</button>
+<br><br>
+<div class="triangle" id="triangle"></ -->div>
+<div class="rect" id="rect"></div>
+<div class="Circle" id="Circle"></div>
+
+<style type="text/css">
+    .triangle{
+        width: 200px;
+        height: 200px;
+        background: red;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        display: flex;
+        justify-content: center;
+    }
+    .rect{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+    }
+    .Circle{
+        width: 200px;
+        height: 200px;
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+    }
+    
+</style>
+</body>
+</html>
