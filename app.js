@@ -1,51 +1,47 @@
-const App = {
-    data(){
-        return {
-            name:"John",
-            surname:"Doe",
-            message:'No comment',
-            status:false,
-            bg:"orange",
-            styles:{
-                fontSize:"30px",
-                borderRadius:"10px",
-                background:"orange",
-                padding:"5px"
-            },
-            stylesX:{
-                fontSize:"20px",
-                borderRadius:"10px",
-                background:"red",
-                padding:"5px"
-            },
-            box:{
-                padding: "10px",
-                borderRadius:"10px",
-                background:"lightblue",
-            },
-            fonts:{
-                fontSize:"30px",
-                fontWeight:"700",
-                textAlign:"center"
-            }
-        }
-    },
-    methods:{
-        change(){
-           // this.bg = "red"
-           //  this.check = true
-        },
+new fullpage('#fullpage', {
+    //options here
+    css3: true,
+    autoScrolling: true,
+    scrollHorizontally: true,
+    sectionsColor: ['#160661', '#4A1569', "#562FB9", "#020041"],
 
-    },
-    computed:{
-        reversedMessage() {
-            return this.message
-                .split('')
-                .reverse().join('');
-        },
-        fullName(){
-            return `${this.name}-${this.surname}`
-        }
-    }
+});
+// fullpage_api.setAllowScrolling(true);
+
+function toRight() {
+    anime({
+        targets: '.toRight',
+        keyframes: [
+            { translateX: [-500, 0] },
+            // { translateX: 0 },
+        ],
+        duration: 3000
+    });
 }
-Vue.createApp(App).mount("#app")
+toRight()
+
+function scale() {
+    anime({
+        targets: ["img"],
+        scale: [1.1, 1],
+        easing: "linear",
+        transition: "all 0.3s"
+    })
+}
+
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+    loop: true,
+    cursor: "_"
+});
+
+typewriter.typeString('Веб-дизайн')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('UX-дизайн')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('UI-дизайн')
+    .pauseFor(2500)
+    .start();
