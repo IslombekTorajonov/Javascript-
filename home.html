@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet"href="home.css">
+</head>
+<body>
+<script type="text/javascript" src="home.js"></script>
+<div id="app">
+  <div class="orange" v-if="seen"></div>
+  <div class="red" v-else></div>
+  <li v-for="person in people">{{person.name}}</li>
+
+</div>
+<script type="text/javascript" src="https://unpkg.com/vue@next"></script>
+</body>
+</html>
